@@ -1,0 +1,114 @@
+.screen{
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+
+
+$primary-color: #2c3e50;
+$secondary-color: #ffa500;
+$text-color: #444;
+$link-color: #3498db;
+$link-hover-color: #1a73e8;
+$background-light: #f9f9f9;
+$background-dark: #1e1e1e;
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background-color: #fefefe;
+  @include border-radius(15px);
+  @include box-shadow(0, 6px, 12px, rgba(0, 0, 0, 0.15));
+  max-width: 900px;
+  margin: 40px auto;
+
+  h1, h2, h3 {
+    font-family: 'SUIT', serif;
+    color: $primary-color;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-family: 'SUIT', sans-serif;
+    line-height: 1.8;
+    color: $text-color;
+    font-size: 1.1em;
+  }
+
+  pre {
+    background-color: $background-dark;
+    color: #ffffff;
+    padding: 20px;
+    @include border-radius(10px);
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+    font-size: 1em;
+    @include box-shadow(inset 0, 0, 10px, rgba(0, 0, 0, 0.5));
+  }
+
+  code {
+    color: #ffffff;
+    padding: 4px 6px;
+    @include border-radius(5px);
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 1em;
+  }
+
+
+  ul, ol {
+    padding-left: 25px;
+    margin-top: 15px;
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+  }
+
+  blockquote {
+    border-left: 5px solid $secondary-color;
+    background-color: $background-light;
+    padding: 20px;
+    color: darken($text-color, 10%);
+    font-style: italic;
+    margin: 25px 0;
+    font-size: 1.1em;
+    @include box-shadow(0, 4px, 8px, rgba(0, 0, 0, 0.1));
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+      color: $link-hover-color;
+    }
+  }
+}

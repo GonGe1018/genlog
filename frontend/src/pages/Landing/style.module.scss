@@ -1,0 +1,108 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1E1E1E;
+    gap: 50px;
+}
+
+
+
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+        font-size: 60px;
+        font-family: "SOYO Maple";
+        font-weight: 700;
+        color: #B5F134;
+    }
+
+    p {
+        color: #CBCBCB;
+        font-family: "SUITE";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.18px;
+    }
+}
+
+
+.generateContainer {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.generateInput{
+    display: flex;
+    width: 560px;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 14px;
+    background: #3A3A3A;
+
+    span{
+        width: 1px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.50);
+    }
+
+    input {
+        color: #FFF;
+        font-family: SUITE;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+        flex: 1 0 0;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+}
+
+.generateButton{
+    display: flex;
+    height: 60px;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #93BE36;
+
+    p {
+        color: #FFF;
+        font-family: SUITE;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 22.4px */
+    }
+}
+
+.generateButton{
+    cursor: pointer;
+}
+
+.generateButton:disabled{
+    background: #76942d;
+    cursor: not-allowed;
+}
